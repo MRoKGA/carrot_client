@@ -1,0 +1,81 @@
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color:  #1C1C1E;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 2.0rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+     width: 100%;
+  max-width: 350px; /* 적당한 값 */
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.country-code {
+  margin-right: 1rem;
+  font-size: 16px;
+  color: #333;
+}
+
+.phone-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  background: transparent;
+}
+
+.help-text {
+  font-size: 13px;
+  color: #888;
+}
+
+.link-text {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ff6f0f;
+}
+
+.confirm-button {
+  background-color: #FF7E36;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.country-flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+  object-fit: cover;
+}

@@ -1,0 +1,68 @@
+/* src/css/startscreen.css */
+
+.start-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* 상단/하단 분리 */
+  align-items: center;
+  height: 100vh;
+  padding: 250px 20px 32px 20px; /* 상단/하단 패딩 */
+  background-color: #1C1C1E;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #f0f8ff; /* aliceblue */
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.bottom-area {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff6f0f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #888;
+}
+
+.login-text span {
+  color: #ff6f0f;
+  font-weight: bold;
+  cursor: pointer;
+}

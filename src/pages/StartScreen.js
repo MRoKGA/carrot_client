@@ -19,7 +19,7 @@ const StartScreen = () => {
     <div className="start-wrapper">
       <div className="content">
         <img src={logo} alt="carrot logo" className="logo" />
-        <h2 className="title">당신 근처의 당근</h2>
+        <h2 className="title">당신 근처의 당근 배포배포</h2>
         <p className="subtitle">
           동네라서 가능한 모든 것<br />
           지금 내 동네를 선택하고 시작해보세요!

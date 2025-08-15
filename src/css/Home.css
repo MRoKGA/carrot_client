@@ -1,0 +1,123 @@
+/*Home.css*/
+.home-wrapper {
+  background: #1C1C1E;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  font-family: sans-serif;
+  position: relative; 
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #1C1C1E;
+}
+
+.location {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.product-list {
+  padding: 16px;
+}
+
+.home-wrapper {
+  background: #1C1C1E;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  font-family: sans-serif;
+}
+
+.floating-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #FF6F0F;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-wrapper2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: rgb(68, 67, 67);
+  border-radius: 10px;
+  min-width: 100px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgb(185, 184, 184)
+}
+
+.dropdown-item:hover {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(68, 67, 67);
+}
+
+.dropdown-item.selected {
+  font-weight: bold;
+  color: white;
+  background-color: rgb(68, 67, 67);
+}
+
+
+.chip-row {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  overflow-x: auto;
+}
+
+.chip {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: #2C2C2E;       
+  color: #e5e5e7;            
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chip--active {
+  background: #fff;           
+  color: #111;               
+  font-weight: 700;
+}
+
+.badge {
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 10px;
+  background: #3A3A3C;
+  color: #fff;
+}

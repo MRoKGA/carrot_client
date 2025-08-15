@@ -28,7 +28,7 @@
 
 .input-wrapper {
      width: 100%;
-  max-width: 350px; /* 적당한 값 */
+  max-width: 350px; 
   display: flex;
   align-items: center;
   background-color: #f3f3f3;

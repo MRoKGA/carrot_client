@@ -1,0 +1,75 @@
+.services-wrap {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #111214;
+  color: #fff;
+}
+
+/* 상단바 */
+.services-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.services-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+.services-right { width: 22px; } /* 우측 공간 맞춤 */
+
+/* 본문 */
+.services-body {
+  padding: 6px 16px 24px;
+}
+
+.services-section { margin: 18px 0; }
+
+.section-heading {
+  color: #cfcfd3;
+  font-weight: 800;
+  margin: 8px 0 12px;
+}
+
+/* 2열 그리드 */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: #e5e5e7;
+  cursor: pointer;
+}
+
+.grid-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #1e1e20;
+  font-size: 20px;
+}
+
+/* 아이콘 강조색 */
+.grid-icon svg { color: #ff6f0f; }  /* 필요하면 항목별 색을 바꿔도 됨 */
+
+.grid-label {
+  font-size: 18px;
+  font-weight: 700;
+}

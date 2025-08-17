@@ -1,0 +1,14 @@
+/* src/components/product/sellerProfile.css */
+.sp-wrap{
+  display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid #1f2124;
+}
+.sp-avatar{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
+.sp-info{ flex:1; }
+.sp-top{ display:flex; align-items:center; gap:8px; }
+.sp-name{ font-weight:700; }
+.sp-score{ display:flex; align-items:center; font-size:13px; color:#ff9151; background:#2a1f18; padding:2px 8px; border-radius:10px; }
+.sp-sub{ color:#a0a3a8; font-size:13px; margin-top:2px; }
+.sp-btn{
+  border:1px solid #2b2d31; background:#1b1c1f; color:#e8e8ea;
+  padding:8px 10px; border-radius:10px; cursor:pointer;
+}

@@ -1,0 +1,26 @@
+.mini-card {
+  width: 160px;
+  flex: 0 0 auto;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.mini-thumb {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.mini-title {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mini-price {
+  font-weight: 700;
+  color: #fff;
+  margin-top: 4px;
+  font-size: 14px;
+}

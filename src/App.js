@@ -6,7 +6,8 @@ import PhoneNumberInput from './pages/PhoneNumberInput';
 import Home from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import NotificationsPage from './pages/NotificationsPage';
-import ServicesPage from './pages/ServicesPage'; 
+import ServicesPage from './pages/ServicesPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/news" element={<NotificationsPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/product/:id" element={<ProductDetailPage />} />
       </Routes>
     </Router>
   );

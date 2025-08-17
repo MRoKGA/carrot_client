@@ -1,0 +1,16 @@
+/* src/components/product/imageCarousel.css */
+.car-wrap{ position:relative; width:100%; background:#000; }
+.car-img{ width:100%; height:320px; object-fit:cover; display:block; }
+.car-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(0,0,0,.35); color:#fff; border:none; width:34px; height:34px;
+  display:flex; align-items:center; justify-content:center; border-radius:50%; cursor:pointer;
+}
+.car-prev{ left:10px; }
+.car-next{ right:10px; }
+.car-dots{
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:10px; display:flex; gap:6px;
+}
+.car-dot{ width:6px; height:6px; border-radius:999px; background:rgba(255,255,255,.4); }
+.car-dot.on{ background:#fff; width:14px; border-radius:6px; transition:all .2s; }

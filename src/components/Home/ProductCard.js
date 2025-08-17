@@ -1,16 +1,26 @@
 import React from 'react';
-import { FaComment, FaHeart } from 'react-icons/fa'; // 아이콘 import
+import { useNavigate } from 'react-router-dom';
+import { FaComment, FaHeart } from 'react-icons/fa';
 import '../../css/productCard.css';
 
 const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <img className="thumbnail" src={require(`../../assets/images/${product.image}`)} alt={product.title} />
+  const nav = useNavigate();
 
+  const goDetail = () => {
+    nav(`/product/${product.id}`, { state: product }); // 상품 데이터 함께 전달
+  };
+
+  return (
+    <div className="product-card" onClick={goDetail}>
+      <img
+        className="thumbnail"
+        src={require(`../../assets/images/${product.images[0]}`)} // 무조건 첫 번째 이미지
+        alt={product.title}
+      />
       <div className="info">
         <div className="title">
-        {product.title}
-        <span className="badge">{product.category}</span>
+          {product.title}
+          <span className="badge">{product.category}</span>
         </div>
         <div className="subinfo">{product.location} · {product.time}</div>
         <div className="price">{product.price.toLocaleString()}원</div>

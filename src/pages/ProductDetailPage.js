@@ -42,10 +42,16 @@ export default function ProductDetailPage() {
 
   const [msg, setMsg] = useState('');
   const sendMessage = () => {
-    if (!msg.trim()) return;
-    console.log('send:', msg);
-    setMsg('');
-  };
+  if (!msg.trim()) return;
+  nav('/chat', {
+    state: {
+      seller: product.seller,
+      productId: product.id,
+      initMsg: msg,   // 초기 입력값 같이 넘기고 싶으면
+    }
+  });
+  setMsg('');
+};
 
   const reportPost = () => {
     const reason = window.prompt('신고 사유를 입력해 주세요.');
@@ -133,7 +139,11 @@ export default function ProductDetailPage() {
 
       {/* 하단 입력/하트 */}
       <div className="pd-bottom">
-        <button className={`pd-like ${liked ? 'pd-like--on' : ''}`} onClick={toggleLike} aria-label="관심">
+        <button
+          className={`pd-like ${liked ? 'pd-like--on' : ''}`}
+          onClick={toggleLike}
+          aria-label="관심"
+        >
           {liked ? <FaHeart /> : <FaRegHeart />}
         </button>
         <input

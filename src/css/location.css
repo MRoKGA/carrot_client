@@ -71,4 +71,11 @@
   border-bottom: 1px solid #2C2C2E; 
   font-size: 15px;
   color: #FFFFFF;
+  cursor: pointer; 
+  transition: background-color 0.2s ease;
+}
+
+.location-item:hover {
+  background-color: #2C2C2E; 
+  color: #FF6F0F;         
 }

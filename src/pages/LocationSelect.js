@@ -1,11 +1,13 @@
 // src/pages/LocationSelect.js
 
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import locationData from '../assets/data/법정동_시도_시군구_읍면동2.json';
 import backIcon from '../assets/images/back2.png';
 import '../css/location.css';
 
-const LocationSearchPage = ({ navigate }) => {
+const LocationSearchPage = () => {
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [filteredList, setFilteredList] = useState([]);
 
@@ -25,9 +27,9 @@ const LocationSearchPage = ({ navigate }) => {
 
   useEffect(() => {
     if (!process.env.REACT_APP_KAKAO_REST_API_KEY) {
-        console.warn('❗️Kakao API 키가 로드되지 않았습니다. .env 설정을 확인하세요.');
+      console.warn('❗️Kakao API 키가 로드되지 않았습니다. .env 설정을 확인하세요.');
     }
-    }, []);
+  }, []);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -75,6 +77,13 @@ const LocationSearchPage = ({ navigate }) => {
     );
   };
 
+  const handleSelectLocation = (item) => {
+    const selectedAddress = `${item.시도명} ${item.시군구명} ${item.읍면동명}`;
+    console.log("선택된 주소:", selectedAddress);
+
+    navigate('/phone', { state: { address: selectedAddress } });
+  };
+
   return (
     <div className="location-wrapper">
       <div className="search-bar-wrapper">
@@ -100,7 +109,11 @@ const LocationSearchPage = ({ navigate }) => {
       <h3 className="location-title">근처 동네</h3>
       <ul className="location-list">
         {filteredList.map((item, idx) => (
-          <li key={idx} className="location-item">
+          <li
+            key={idx}
+            className="location-item"
+            onClick={() => handleSelectLocation(item)} // ✅ 클릭 이벤트 추가
+          >
             {item.시도명} {item.시군구명} {item.읍면동명}
           </li>
         ))}

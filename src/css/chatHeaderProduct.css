@@ -1,0 +1,20 @@
+.chp-wrap{
+  display:flex; gap:12px; padding:12px; border-bottom:1px solid #222;
+  background:#0e0f11; position:sticky; top:56px; z-index:2;
+}
+.chp-thumb{ width:72px;height:72px;border-radius:12px;object-fit:cover; }
+.chp-body{ flex:1; min-width:0; }
+.chp-title{ color:#e9edf3;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.chp-price{ margin-top:4px; font-weight:800; color:#fff; }
+.chp-badge{
+  margin-left:6px; font-size:11px; padding:2px 6px; border-radius:999px;
+  background:#1d212a; color:#cbd2db; border:1px solid #2a2f38;
+}
+.chp-actions{ display:flex; gap:8px; margin-top:8px; }
+.chp-btn{
+  display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:10px;
+  background:#ff6f00; color:#fff; border:0; font-size:12px;
+}
+.chp-btn.chp-outline{
+  background:#15181c; color:#e7e9ed; border:1px solid #2a2f38;
+}

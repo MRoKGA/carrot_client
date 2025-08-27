@@ -1,39 +1,31 @@
+// src/pages/LoginPhone.js
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import backIcon from '../assets/images/back2.png';
 import countryFlag from '../assets/images/country.png';
 import '../css/phoneInput.css';
-
 import { sendVerificationCode } from '../api/auth';
 
-const PhoneNumberInput = () => {
+const LoginPhone = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const selectedAddress = location.state?.address || '';
   const [phoneNumber, setPhoneNumber] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleBack = () => navigate(-1);
 
   const handleConfirm = async () => {
-    if (!phoneNumber) {
-      alert('휴대폰 번호를 입력해주세요.');
-      return;
-    }
-
-    setLoading(true);
+    if (!phoneNumber) return alert('휴대폰 번호를 입력해주세요.');
     try {
-      const result = await sendVerificationCode(phoneNumber);
-      console.log('📩 인증번호 발송 결과:', result);
-
-      if (result.code === 200) {
-        // 성공 → 인증 화면으로 이동
-        navigate('/verify', { state: { phoneNumber, address: selectedAddress } });
+      setLoading(true);
+      const res = await sendVerificationCode(phoneNumber);
+      if (Number(res.code) === 200) {
+        // 인증번호 발송 성공 → 인증화면
+        navigate('/login/verify', { state: { phoneNumber } });
       } else {
-        alert(`인증번호 발송 실패: ${result.message}`);
+        alert(res?.message ?? '인증번호 발송에 실패했습니다.');
       }
-    } catch (error) {
-      alert('서버와 연결에 실패했습니다.');
+    } catch (e) {
+      alert(e?.response?.data?.message || e?.message || '서버와 연결에 실패했습니다.');
     } finally {
       setLoading(false);
     }
@@ -73,4 +65,4 @@ const PhoneNumberInput = () => {
   );
 };
 
-export default PhoneNumberInput;
+export default LoginPhone;
